@@ -110,9 +110,13 @@
     <script src="https://cdn.jsdelivr.net/npm/handlebars/dist/handlebars.min.js"></script>
     <script>
       const notes = [
-        {
+         {
           title: "Nmap",
           text: "nmap -p- -sC -sV -sT $IP --open"
+        },
+        {
+          title: "Nmap {All TCP and UDP Ports}",
+          text: " nmap -v -sU -sS -p- -A -T4 $IP"
         },
         {
           title: "WFUZZ {Large Directories.}",
@@ -130,28 +134,43 @@
           title: "WFUZZ {Medium Files.}",
           text: "wfuzz -c -z file,/usr/share/seclists/Discovery/Web-Content/raft-medium-files-lowercase.txt --hc 404 $URL"
         },
+        {
+          title: "Python TTY",
+          text: "python -c 'import pty; pty.spawn("/bin/bash")'"
+        },
+         {
+          title: "Python TTY",
+          text: "python -c 'import pty; pty.spawn("/bin/bash")'"
+        },
       ];
 
       const form = document.querySelector('form');
       const output = document.getElementById('output');
 
       form.addEventListener('submit', (event) => {
-        event.preventDefault();
+  event.preventDefault();
 
-        const search = form.search.value.toLowerCase();
-        const matchingNotes = notes.filter(note => note.title.toLowerCase().includes(search) || note.text.toLowerCase().includes(search));
+  const search = form.search.value.toLowerCase();
 
-        if (matchingNotes.length > 0) {
-          output.innerHTML = matchingNotes.map(note => `
-            <div class="note">
-              <h3 class="title">${note.title}</h3>
-              <p class="text">${note.text}</p>
-            </div>
-          `).join('');
-        } else {
-          output.textContent = `"${search}" not found in the notes.`;
-        }
-      });
+  if (search.trim() === "") {
+    output.textContent = "Please enter a search term.";
+    return;
+  }
+
+  const matchingNotes = notes.filter(note => note.title.toLowerCase().includes(search) || note.text.toLowerCase().includes(search));
+
+  if (matchingNotes.length > 0) {
+    output.innerHTML = matchingNotes.map(note => `
+      <div class="note">
+        <h3 class="title">${note.title}</h3>
+        <p class="text">${note.text}</p>
+      </div>
+    `).join('');
+  } else {
+    output.textContent = `"${search}" not found in the notes.`;
+  }
+});
+
     </script>
   </body>
 </html>
