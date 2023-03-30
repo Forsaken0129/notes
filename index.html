@@ -1,226 +1,235 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>Forsaken Notes</title>
-    <style>
-      body {
-  background:
-    linear-gradient(to bottom, rgba(0,0,0,0.8) 0%,rgba(0,0,0,0.8) 100%),
-    url(https://wallpapercave.com/wp/wp9145738.jpg) center/cover fixed no-repeat;
-  color: #0f0;
-  font-family: "Courier New", Courier, monospace;
-  background-blend-mode: overlay;
+
+<head>
+  <meta charset="UTF-8">
+  <title>Forsaken Notes</title>
+  <style>
+    body {
+      background: none;
+    }
+
+    #video-background {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+      z-index: -1;
+    }
+
+    form {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 50px 0;
+    }
+
+    label {
+      font-size: 18px;
+      margin-right: 10px;
+    }
+
+    input[type="text"] {
+      font-size: 18px;
+      padding: 10px;
+      border: 1px solid #0f0;
+      border-radius: 5px;
+      background-color: #222;
+      color: #0f0;
+    }
+
+    button[type="submit"] {
+      font-size: 18px;
+      padding: 10px;
+      border: 1px solid #0f0;
+      border-radius: 5px;
+      background-color: #444;
+      color: #0f0;
+      cursor: pointer;
+      transition: background-color 0.2s ease-in-out;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #0f0;
+      color: #444;
+    }
+
+    div.note {
+      background-color: #222;
+      border: 1px solid #0f0;
+      border-radius: 5px;
+      padding: 10px;
+      margin-bottom: 10px;
+      box-shadow: 2px 2px 5px #0f0;
+    }
+
+    h3.title {
+      margin-top: 0;
+      font-size: 24px;
+      color: #0f0;
+    }
+
+    p.text {
+      font-size: 18px;
+      color: #0f0;
+    }
+
+    #output {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .not-found {
+      font-size: 18px;
+      color: #f00;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    /* Added CSS for background color change */
+    .search-input {
+      background-color: rgba(255, 255, 255, 0.2);
+      border: none;
+      padding: 10px;
+      color: #000;
+      font-size: 18px;
+      border-radius: 5px;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .search-input:focus {
+      background-color: rgba(255, 255, 255, 0.2);
+      outline: none;
+    }
+  </style>
+</head>
+
+<body>
+  <form>
+    <label for="search">Search:</label>
+    <input type="text" id="search" name="search" class="search-input">
+    <button type="submit">Search</button>
+  </form>
+
+  <video autoplay loop muted id="video-background">
+    <source src="eshann.mp4" type="video/mp4">
+  </video>
+
+  <div id="output"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/handlebars/dist/handlebars.min.js"></script>
+  <script>
+    const notes = [
+      {
+        title: "Nmap",
+        text: "nmap -p- -sC -sV -sT $IP --open"
+      },
+      {
+        title: "Nmap {All TCP and UDP Ports}",
+        text: " nmap -v -sU -sS -p- -A -T4 $IP"
+      },
+      {
+        title: "WFUZZ {Large Directories.}",
+        text: "wfuzz -c -z file,/usr/share/seclists/Discovery/Web-Content/raft-large-directories-lowercase.txt --hc 404 $URL"
+      },
+      {
+        title: "WFUZZ {Large Files.}",
+        text: "wfuzz -c -z file,/usr/share/seclists/Discovery/Web-Content/raft-large-files-lowercase.txt --hc 404 $URL"
+      },
+      {
+        title: "WFUZZ {Medium Directories.}",
+        text: "wfuzz -c -z file,/usr/share/seclists/Discovery/Web-Content/raft-medium-directories-lowercase.txt --hc 404 $URL"
+      },
+      {
+        title: "WFUZZ {Medium Files.}",
+        text: "wfuzz -c -z file,/usr/share/seclists/Discovery/Web-Content/raft-medium-files-lowercase.txt --hc 404 $URL"
+      },
+      {
+        title: "Linpeas",
+        text: "curl -L https://github.com/carlospolop/PEASS-ng/releases/latest/download/linpeas.sh | sh"
+      },
+      {
+        title: "Linenum",
+        text: "curl -L https://github.com/rebootuser/LinEnum/blob/master/LinEnum.sh | sh"
+      },
+      {
+        title: "Hydra",
+        text: "hydra -L users.txt -P pass.txt $IP ssh"
+      },
+      {
+        title: "SSH",
+        text: "ssh -i id_rsa user@$IP"
+      },
+      {
+        title: "john {Cracking FIle.}",
+        text: "john --wordlist=/home/eshan/wordlist/rockyou.txt crackfile"
+      },
+      { title: "Arzt (German)", text: "doctor (English)" },
+      { title: "Im (German)", text: "at the (English)" },
+      { title: "Kommt (German)", text: "comes (English)" },
+      { title: "Zu (German)", text: "to (English)" },
+      { title: "Sind sie (German)", text: "are you (English)" },
+      { title: "Entschuldigung (German)", text: "excuse me (English)" },
+      { title: "Sind sie (German)", text: "are you (English)" },
+      { title: "Was (German)", text: "what (English)" },
+      { title: "Ich? (German)", text: "me? (English)" },
+      { title: "Kein (German)", text: "not a (English)" },
+      { title: "Reich (German)", text: "rich (English)" },
+      { title: "Hemd (German)", text: "shirt (English)" },
+      { title: "Teuer (German)", text: "expensive (English)" },
+      { title: "Aber (German)", text: "but (English)" },
+      { title: "Braucht (German)", text: "needs (English)" },
+      { title: "Hilfe (German)", text: "help (English)" },
+      { title: "Jetzt (German)", text: "now (English)" },
+      { title: "Einen (German)", text: "a (English)" },
+      { title: "Wo (German)", text: "where (English)" },
+      { title: "Die (German)", text: "the (English)" },
+      { title: "Er (German)", text: "he (English)" },
+      { title: "Da druben! (German)", text: "over there! (English)" },
+      { title: "Schnell! (German)", text: "quick! (English)" },
+      { title: "Krank! (German)", text: "sick! (English)" },
+      { title: "Sieht (German)", text: "sees (English)" },
+      { title: "Lauft (German)", text: "runs (English)" },
+      { title: "Ihr (German)", text: "her (English)" },
+      { title: "Es geht (German)", text: "I am all right (English)" },
+      { title: "Wie gehts (German)", text: "how are you (English)" },
+      { title: "Bis bald (German)", text: "see you soon (English)" },
+      { title: "Prost (German)", text: "cheers (English)" },
+      { title: "Wiedersehen (German)", text: "goodbye (English)" },
+      { title: "Naturlich (German)", text: "of course (English)" },
+      { title: "Bis spater (German)", text: "see you later (English)" },
+      { title: "Es tut mir leid (German)", text: "I'm sorry (English)" },
+    ];
+
+    const form = document.querySelector('form');
+    const output = document.getElementById('output');
+
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+
+      const search = form.search.value.toLowerCase();
+
+      if (search.trim() === "") {
+        output.textContent = "Please enter a search term.";
+        return;
       }
 
-      form {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 50px 0;
-      }
+      const matchingNotes = notes.filter(note => note.title.toLowerCase().includes(search) || note.text.toLowerCase().includes(search));
 
-      label {
-        font-size: 18px;
-        margin-right: 10px;
-      }
-
-      input[type="text"] {
-        font-size: 18px;
-        padding: 10px;
-        border: 1px solid #0f0;
-        border-radius: 5px;
-        background-color: #222;
-        color: #0f0;
-      }
-
-      button[type="submit"] {
-        font-size: 18px;
-        padding: 10px;
-        border: 1px solid #0f0;
-        border-radius: 5px;
-        background-color: #444;
-        color: #0f0;
-        cursor: pointer;
-        transition: background-color 0.2s ease-in-out;
-      }
-
-      button[type="submit"]:hover {
-        background-color: #0f0;
-        color: #444;
-      }
-
-      div.note {
-        background-color: #222;
-        border: 1px solid #0f0;
-        border-radius: 5px;
-        padding: 10px;
-        margin-bottom: 10px;
-        box-shadow: 2px 2px 5px #0f0;
-      }
-
-      h3.title {
-        margin-top: 0;
-        font-size: 24px;
-        color: #0f0;
-      }
-
-      p.text {
-        font-size: 18px;
-        color: #0f0;
-      }
-
-      #output {
-        max-width: 800px;
-        margin: 0 auto;
-      }
-
-      .not-found {
-        font-size: 18px;
-        color: #f00;
-        text-align: center;
-        margin-top: 20px;
-      }
-
-      /* Added CSS for background color change */
-      .search-input {
-        background-color: rgba(255, 255, 255, 0.2);
-        border: none;
-        padding: 10px;
-        color: #000;
-        font-size: 18px;
-        border-radius: 5px;
-        transition: all 0.3s ease-in-out;
-      }
-
-      .search-input:focus {
-        background-color: rgba(255, 255, 255, 0.2);
-        outline: none;
-      }
-    </style>
-  </head>
-
-  <body>
-    <form>
-      <label for="search">Search:</label>
-      <input type="text" id="search" name="search" class="search-input">
-      <button type="submit">Search</button>
-    </form>
-
-    <div id="output"></div>
-
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/handlebars/dist/handlebars.min.js"></script>
-    <script>
-      const notes = [
-        {
-          title: "Nmap",
-          text: "nmap -p- -sC -sV -sT $IP --open"
-        },
-        {
-          title: "Nmap {All TCP and UDP Ports}",
-          text: " nmap -v -sU -sS -p- -A -T4 $IP"
-        },
-        {
-          title: "WFUZZ {Large Directories.}",
-          text: "wfuzz -c -z file,/usr/share/seclists/Discovery/Web-Content/raft-large-directories-lowercase.txt --hc 404 $URL"
-        },
-        {
-          title: "WFUZZ {Large Files.}",
-          text: "wfuzz -c -z file,/usr/share/seclists/Discovery/Web-Content/raft-large-files-lowercase.txt --hc 404 $URL"
-        },
-        {
-          title: "WFUZZ {Medium Directories.}",
-          text: "wfuzz -c -z file,/usr/share/seclists/Discovery/Web-Content/raft-medium-directories-lowercase.txt --hc 404 $URL"
-        },
-        {
-          title: "WFUZZ {Medium Files.}",
-          text: "wfuzz -c -z file,/usr/share/seclists/Discovery/Web-Content/raft-medium-files-lowercase.txt --hc 404 $URL"
-        },
-         {
-          title: "Linpeas",
-          text: "curl -L https://github.com/carlospolop/PEASS-ng/releases/latest/download/linpeas.sh | sh"
-        },
-        {
-          title: "Linenum",
-          text: "curl -L https://github.com/rebootuser/LinEnum/blob/master/LinEnum.sh | sh"
-        },
-        {
-          title: "Hydra",
-          text: "hydra -L users.txt -P pass.txt $IP ssh"
-        },
-          {
-          title: "SSH",
-          text: "ssh -i id_rsa user@$IP"
-        },
-          {
-          title: "john {Cracking FIle.}",
-          text: "john --wordlist=/home/eshan/wordlist/rockyou.txt crackfile"
-        },
-         { title: "Arzt (German)", text: "doctor (English)" },
-{ title: "Im (German)", text: "at the (English)" },
-{ title: "Kommt (German)", text: "comes (English)" },
-{ title: "Zu (German)", text: "to (English)" },
-{ title: "Sind sie (German)", text: "are you (English)" },
-{ title: "Entschuldigung (German)", text: "excuse me (English)" },
-{ title: "Sind sie (German)", text: "are you (English)" },
-{ title: "Was (German)", text: "what (English)" },
-{ title: "Ich? (German)", text: "me? (English)" },
-{ title: "Kein (German)", text: "not a (English)" },
-{ title: "Reich (German)", text: "rich (English)" },
-{ title: "Hemd (German)", text: "shirt (English)" },
-{ title: "Teuer (German)", text: "expensive (English)" },
-{ title: "Aber (German)", text: "but (English)" },
-{ title: "Braucht (German)", text: "needs (English)" },
-{ title: "Hilfe (German)", text: "help (English)" },
-{ title: "Jetzt (German)", text: "now (English)" },
-{ title: "Einen (German)", text: "a (English)" },
-{ title: "Wo (German)", text: "where (English)" },
-{ title: "Die (German)", text: "the (English)" },
-{ title: "Er (German)", text: "he (English)" },
-{ title: "Da druben! (German)", text: "over there! (English)" },
-{ title: "Schnell! (German)", text: "quick! (English)" },
-{ title: "Krank! (German)", text: "sick! (English)" },
-{ title: "Sieht (German)", text: "sees (English)" },
-{ title: "Lauft (German)", text: "runs (English)" },
-{ title: "Ihr (German)", text: "her (English)" },
-{ title: "Es geht (German)", text: "I am all right (English)" },
-{ title: "Wie gehts (German)", text: "how are you (English)" },
-{ title: "Bis bald (German)", text: "see you soon (English)" },
-{ title: "Prost (German)", text: "cheers (English)" },
-{ title: "Wiedersehen (German)", text: "goodbye (English)" },
-{ title: "Naturlich (German)", text: "of course (English)" },
-{ title: "Bis spater (German)", text: "see you later (English)" },
-{ title: "Es tut mir leid (German)", text: "I'm sorry (English)" },
-      ];
-
-      const form = document.querySelector('form');
-      const output = document.getElementById('output');
-
-      form.addEventListener('submit', (event) => {
-  event.preventDefault();
-
-  const search = form.search.value.toLowerCase();
-
-  if (search.trim() === "") {
-    output.textContent = "Please enter a search term.";
-    return;
-  }
-
-  const matchingNotes = notes.filter(note => note.title.toLowerCase().includes(search) || note.text.toLowerCase().includes(search));
-
-  if (matchingNotes.length > 0) {
-    output.innerHTML = matchingNotes.map(note => `
+      if (matchingNotes.length > 0) {
+        output.innerHTML = matchingNotes.map(note => `
       <div class="note">
         <h3 class="title">${note.title}</h3>
         <p class="text">${note.text}</p>
       </div>
     `).join('');
-  } else {
-    output.textContent = `"${search}" not found in the notes.`;
-  }
-});
+      } else {
+        output.textContent = `"${search}" not found in the notes.`;
+      }
+    });
 
-    </script>
-  </body>
+  </script>
+</body>
 </html>
