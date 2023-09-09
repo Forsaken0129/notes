@@ -2,122 +2,267 @@
 <html lang="en">
 
 <head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <meta charset="UTF-8">
   <title>Forsaken Notes</title>
-  <style>
-    body {
-      background: none;
-    }
+<style>
 
-    #video-background {
-      position: fixed;
-      right: 0;
-      bottom: 0;
-      min-width: 100%;
-      min-height: 100%;
-      z-index: -1;
-    }
+  body {
+    background: url('eshann.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
 
-    form {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin: 50px 0;
-    }
+  form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+  }
 
-    label {
-      font-size: 18px;
-      margin-right: 10px;
+  label {
+    font-size: 18px;
+    margin-right: 10px;
+  }
+    @keyframes moveButton {
+    0% {
+      transform: translateY(0);
     }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
 
-    input[type="text"] {
-      font-size: 18px;
-      padding: 10px;
-      border: 1px solid #0f0;
-      border-radius: 5px;
-      background-color: #222;
-      color: #0f0;
-    }
+  button[type="submit"] {
+    /* Other button styles ... */
+    animation: moveButton 2s infinite; /* Apply the animation */
+  }
 
-    button[type="submit"] {
-      font-size: 18px;
-      padding: 10px;
-      border: 1px solid #0f0;
-      border-radius: 5px;
-      background-color: #444;
-      color: #0f0;
-      cursor: pointer;
-      transition: background-color 0.2s ease-in-out;
-    }
+  .search-input {
+    font-size: 18px;
+    padding: 10px;
+    border: 1px solid #FF1493; /* Change the border color to dark pink */
+    border-radius: 5px;
+    background-color: rgba(0, 255, 255, 0.5); /* Light transparent color */
+    color: #0f0;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+  }
 
-    button[type="submit"]:hover {
-      background-color: #0f0;
-      color: #444;
-    }
+  .search-input:focus {
+    background-color: #FF69B4; /* Neon Pink */
+    color: #fff; /* White */
+    font-weight: bold; /* Bold text */
+    text-shadow: 0 0 5px #00FF00, 0 0 10px #00FF00, 0 0 20px #00FF00; /* Neon shadow effect */
+    transform: scale(1.05); /* Add scale animation on focus */
+  }
 
-    div.note {
-      background-color: #222;
-      border: 1px solid #0f0;
-      border-radius: 5px;
-      padding: 10px;
-      margin-bottom: 10px;
-      box-shadow: 2px 2px 5px #0f0;
-    }
+  .search-input::placeholder {
+    color: limegreen; /* Lime Green Neon for placeholder text */
+    font-weight: bold; /* Make the placeholder text bold */
+  }
 
-    h3.title {
-      margin-top: 0;
-      font-size: 24px;
-      color: #0f0;
-    }
+  .search-input.typing {
+    animation: neonText 0.5s infinite alternate; /* Add neon animation while typing */
+  }
 
-    p.text {
-      font-size: 18px;
-      color: #0f0;
+  @keyframes neonText {
+    0% {
+      color: limegreen;
+      text-shadow: 0 0 5px #00FF00, 0 0 10px #00FF00, 0 0 20px #00FF00; /* Neon shadow effect */
     }
+    100% {
+      color: lime;
+      text-shadow: none;
+    }
+  }
 
-    #output {
-      max-width: 800px;
-      margin: 0 auto;
-    }
+  button[type="submit"] {
+    font-size: 18px;
+    padding: 10px;
+    border: none; /* Remove the border */
+    border-radius: 5px;
+    background-color: rgba(144, 0, 234, 0.3); /* Transparent light purple */
+    color: #00E3FC;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out; /* Add background color transition */
+    box-shadow: 0 0 10px #FF69B4, 0 0 20px #FF69B4, 0 0 30px #FF69B4; /* Neon glow shadow */
+  }
 
-    .not-found {
-      font-size: 18px;
-      color: #f00;
-      text-align: center;
-      margin-top: 20px;
-    }
+  button[type="submit"]:hover {
+    background-color: #FF69B4; /* Neon Pink background on hover */
+  }
 
-    /* Added CSS for background color change */
-    .search-input {
-      background-color: rgba(255, 255, 255, 0.2);
-      border: none;
-      padding: 10px;
-      color: #000;
-      font-size: 18px;
-      border-radius: 5px;
-      transition: all 0.3s ease-in-out;
-    }
+  div.note {
+    background-color: rgba(144, 0, 234, 0.3); /* Transparent light purple */
+    border: 1px solid #9000EA;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-shadow: 2px 2px 5px rgba(255, 0, 228, 0.7); /* Transparent light pink shadow */
+  }
+  
 
-    .search-input:focus {
-      background-color: rgba(255, 255, 255, 0.2);
-      outline: none;
-    }
-  </style>
+  h3.title {
+    margin-top: 0;
+    font-size: 30px;
+    color: #36FC00;
+    font-weight: bold; /* Make the text bold */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5), 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00; /* Add neon shadow effect */
+  }
+
+  p.text {
+    font-size: 24px;
+    color: #04ECF4;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5), 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00; /* Add neon shadow effect */
+  }
+
+  /* Hover effect */
+  h3.title:hover,
+  p.text:hover {
+    color: #FF6F61; /* Change text color on hover */
+  }
+
+  output {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .not-found {
+    font-size: 18px;
+    color: #8D29F2;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  /* Added CSS for background color change */
+  .search-input {
+    background-color: rgba(141, 41, 242, 0.5); /* Transparent light pink */
+    border: none;
+    padding: 10px;
+    color: #000;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .search-input:focus {
+    background-color: #FF1791;
+    outline: none;
+  }
+  .social-icons {
+    text-align: right; /* Align icons to the right */
+    margin-bottom: 20px; /* Add space below the icons */
+}
+
+  /* Style for the icons container */
+  .contact-icons-container {
+    position: absolute;
+    top: 10px; /* Adjust the top spacing as needed */
+    right: 10px; /* Adjust the right spacing as needed */
+    text-align: right; /* Align icons to the right */
+  }
+
+  /* Style for Instagram icon */
+  .fab.fa-instagram {
+    font-size: 24px; /* Adjust the icon size */
+    margin-right: 10px; /* Add spacing between icons */
+    color: #E4405F; /* Instagram icon color */
+  }
+
+  /* Style for LinkedIn icon */
+  .fab.fa-linkedin {
+    font-size: 24px; /* Adjust the icon size */
+    margin-right: 10px; /* Add spacing between icons */
+    color: #0077B5; /* LinkedIn icon color */
+  }
+
+  /* Style for email icon */
+  .fas.fa-envelope {
+    font-size: 24px; /* Adjust the icon size */
+    color: #FF5733; /* Email icon color (you can choose your own color) */
+  }
+  .error-text {
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+}
+        /* Existing CSS styles... */
+
+        /* New styles for the top title */
+        .top-title {
+            text-align: bottom;
+            font-size: 36px;
+            font-weight: bold;
+            color: #FF00FF; /* Neon Pink */
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5), 0 0 10px #FF00FF, 0 0 20px #FF00FF, 0 0 30px #FF00FF; /* Neon shadow effect */
+            margin-top: 20px;
+        }
+                .search-input {
+            font-size: 18px;
+            padding: 10px;
+            border: 1px solid #FF1493;
+            border-radius: 5px;
+            background-color: rgba(0, 255, 255, 0.5);
+            color: #0f0;
+            transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+            text-shadow: 0 0 5px #00FF00, 0 0 10px #00FF00, 0 0 20px #00FF00; /* Neon shadow effect */
+            font-weight: bold; /* Make the text bold */
+        }
+
+        .search-input:focus {
+            background-color: #FF69B4;
+            color: #fff;
+            transform: scale(1.05);
+            text-shadow: 0 0 5px #00FF00, 0 0 10px #00FF00, 0 0 20px #00FF00;
+            font-weight: bold;
+        }
+
+        .search-input::placeholder {
+            color: limegreen;
+            font-weight: bold;
+            text-shadow: 0 0 5px #00FF00, 0 0 10px #00FF00, 0 0 20px #00FF00;
+        }
+
+
+</style>
 </head>
 
 <body>
   <form>
-    <label for="search">Search:</label>
-    <input type="text" id="search" name="search" class="search-input">
-    <button type="submit">Search</button>
+         <!-- Search input with neon and bold effect -->
+        <label for="search">Search:</label>
+        <input type="text" id="search" name="search" class="search-input" placeholder="Enter your search">
+        <button type="submit">Search</button>
   </form>
+  
+<div class="contact-icons-container">
+  <!-- Instagram Icon and Link -->
+  <a href="https://www.instagram.com/eshan.co.in" target="_blank">
+    <i class="fab fa-instagram"></i>
+  </a>
 
-  <video autoplay loop muted id="video-background">
-    <source src="eshann.mp4" type="video/mp4">
-  </video>
+  <!-- LinkedIn Icon and Link -->
+  <a href="https://www.linkedin.com/in/eshan-sharma-a00b20154/" target="_blank">
+    <i class="fab fa-linkedin"></i>
+  </a>
 
-  <div id="output"></div>
-
+  <!-- Email Icon and Link -->
+  <a href="mailto:eshanhyy@gmail.com" target="_blank">
+    <i class="fas fa-envelope"></i>
+  </a>
+</div>
+    <div class="top-title">Hacking Notes</div>
+<div id="output"></div>
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/handlebars/dist/handlebars.min.js"></script>
   <script>
@@ -241,9 +386,9 @@
         <p class="text">${note.text}</p>
       </div>
     `).join('');
-      } else {
-        output.textContent = `"${search}" not found in the notes.`;
-      }
+     } else {
+       output.innerHTML = `<span class="error-text">"${search}" not found in the notes.</span>`;
+    }
     });
 
   </script>
